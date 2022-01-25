@@ -20,7 +20,7 @@ function draw() {
   position.add(velocity);
   edges();
 
-  text("Velocity %" + 100 * velSlider.value()/c + "c", 100, height-5);
+  text("Velocity: " + 100 * round(velSlider.value()/c, 1) + "% c", 100, height-5);
   
 
   console.log(counter);
