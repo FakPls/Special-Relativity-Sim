@@ -1,8 +1,9 @@
 let position;
 let velocity;
 let counter = 0;
+let time = 0;
 let velSlider;
-const c = 5;
+const c = 3;
 
 function setup() {
   createCanvas(800, 400);
@@ -21,6 +22,8 @@ function draw() {
   edges();
 
   text("Velocity: " + 100 * round(velSlider.value()/c, 1) + "% c", 100, height-5);
+  text("Time: " + round(time/60, 1), 20, height-5);
+  time++;
   
 
   console.log(counter);
@@ -36,9 +39,11 @@ function edges() {
   else if (position.y > height) {
     velocity.y = velocity.y * -1;
     counter ++;
+    time = 0;
   }
   else if (position.y < 0) {
     velocity.y = velocity.y * -1;
     counter ++;
+    time = 0;
   }
 }
