@@ -21,6 +21,8 @@ function draw() {
   position.add(velocity);
   edges();
 
+  line(position.x, position.y, position.x + velocity.x *10, position.y + velocity.y *10);
+
   text("Velocity: " + 100 * round(velSlider.value()/c, 1) + "% c", 100, height-5);
   text("Time: " + round(time/60, 1), 20, height-5);
   time++;
