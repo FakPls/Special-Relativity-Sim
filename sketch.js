@@ -8,7 +8,7 @@ const c = 3;
 function setup() {
   createCanvas(800, 400);
   position = createVector(width/2, 0);
-  velocity = createVector(0 , 5);
+  velocity = createVector(0 , c);
   velSlider = createSlider(0, c, 0, 0);
 }
 
